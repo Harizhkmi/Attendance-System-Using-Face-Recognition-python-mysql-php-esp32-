@@ -5,8 +5,8 @@
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);  // Or use 0x3F if this doesn't work
 
-const char* ssid = "Redmi Note 9S";
-const char* password = "akudahlupado";
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 AsyncWebServer server(80);
 
