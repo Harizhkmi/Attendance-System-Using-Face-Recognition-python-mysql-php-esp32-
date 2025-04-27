@@ -32,3 +32,64 @@ Follow these steps to set up the website for the Attendance System:
 
 After these steps, the website backend will be ready to connect to the database!
 
+Perfect, you want a **full Step 2** section including:  
+- Hardware setup (wiring)  
+- Uploading Arduino code  
+- Behavior explanation
+
+Here’s the finalized version for your GitHub **Step 2**:
+
+---
+
+## 📋 Step 2: Hardware Setup and Upload Arduino Code
+
+### 🛠 Hardware Setup
+
+Connect the ESP32 to the 16x2 I2C LCD display:
+
+| LCD Pin | ESP32 Pin |
+|:-------:|:---------:|
+| VCC     | 5V        |
+| GND     | GND       |
+| SDA     | GPIO21    |
+| SCL     | GPIO22    |
+
+> ⚡ **Note**: Ensure the LCD is connected to **5V**, not 3.3V, for proper operation.
+
+---
+
+### 🚀 Upload Arduino Code
+
+Upload the provided Arduino sketch to your ESP32 using the Arduino IDE.  
+Make sure you install these libraries first:
+
+- **LiquidCrystal_I2C**
+- **WiFi**
+- **Wire**
+- **ESPAsyncWebServer**
+- **AsyncTCP**
+
+You can install them through Arduino Library Manager (`Tools > Manage Libraries`).
+
+---
+
+### 📟 System Behavior
+
+- When the ESP32 starts, it will automatically connect to your Wi-Fi network.
+- The LCD will initially display: **"Waiting..."**.
+- When a registration is received (HTTP GET request to `/register`):
+  - The LCD will display: **"Marked"**.
+  - After **2 seconds**, the LCD will reset back to **"Waiting..."**.
+- This behavior allows the ESP32 to handle multiple registrations without rebooting.
+
+---
+
+### 🔄 Key Display Flow
+
+```
+Waiting...   --->   Marked   --->   Waiting...
+          (trigger)    (2 seconds)
+```
+
+---
+
