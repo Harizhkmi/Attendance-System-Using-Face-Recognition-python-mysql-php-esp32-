@@ -130,7 +130,7 @@ Waiting...   --->   Marked   --->   Waiting...
 
 ---
 
-### **Important Step Before Running the Application**
+### **3. Important Step Before Running the Application**
 
 Before running the **main.py** script, make sure to generate **encode files** for face recognition by running the **EncodeGenerator.py** script.
 
