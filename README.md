@@ -41,7 +41,7 @@ Here’s the finalized version for your GitHub **Step 2**:
 
 ---
 
-## 📋 Step 2: Hardware Setup and Upload Arduino Code
+## 2. Hardware Setup and Upload Arduino Code
 
 ### 🛠 Hardware Setup
 
