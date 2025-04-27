@@ -1,0 +1,32 @@
+# arahan query untuk menyimpan data barang baru
+    $sql_simpan = "insert into student
+    (Name, ID, Contact, Program, Class, Picture) values
+    ( '".$_POST['name']."', '".$_POST['id']."', '".$_POST['contact']."','".$_POST['program']."',
+      '".$_POST['class']."', '$nama_baru') ";
+
+    # melaksanakan arahan SQL menyimpan barang baru 
+    $laksana_sql = mysqli_query($condb,$sql_simpan);
+    
+    # menyemak prses dilaksanakan barjaya atau tidak
+    if($laksana_sql)
+    {
+        # muatnaik gambar
+        move_uploaded_file($lokasi,"img/".$nama_baru);
+        
+        # jika berjaya kembali ke fail senarai-barang.php
+        die("<script>alert('Pendaftaran Berjaya.');
+        window.history.back(); </script>");
+    }
+    else
+    {
+        # jika gagal
+        die("<script>alert('Pendaftaran Gagal.');
+        window.location.href='senarai-barang.php';</script>");
+    } 
+  }
+  else
+  {
+    # jika maklumat barang diisi tidak lengkap
+    die("<script>alert('Sila Lengkapkan Maklumat');
+    window.location.href='barang-daftar-borang.php';</script>");
+  }
