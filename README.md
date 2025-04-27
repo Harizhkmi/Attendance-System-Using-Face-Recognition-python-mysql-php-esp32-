@@ -54,7 +54,7 @@ Here’s the **updated full Step 2 documentation**, nice and organized:
 
 ---
 
-## 📋 Step 2: Hardware Setup and Upload Arduino Code
+## 2. Hardware Setup and Upload Arduino Code
 
 ---
 
