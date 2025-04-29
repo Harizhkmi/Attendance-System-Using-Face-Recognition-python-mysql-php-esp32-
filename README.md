@@ -1,7 +1,3 @@
-Got it! Here's the updated **README** with the modification you've requested, specifically excluding the step for dynamic IP address management and adding the instruction to run **EncodeGenerator** before running **`main.py`**.
-
----
-
 # 📚 Attendance System Using Face Recognition (Python + MySQL + PHP + ESP32)
 
 ## 📌 Project Summary
